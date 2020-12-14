@@ -11,9 +11,10 @@ fun runAll()
 {
 	return listOf(
 		day1(),
-		day2()
+		day2(),
+		day3()
 	).forEachIndexed { i, x ->
-		println("Day $i:")
+		println("Day ${i+1}:")
 		println("\tPart 1: ${x.first}")
 		println("\tPart 2: ${x.second}")
 	}
