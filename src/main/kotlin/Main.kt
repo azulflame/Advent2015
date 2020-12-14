@@ -13,7 +13,8 @@ fun runAll()
 		day1(),
 		day2(),
 		day3(),
-		day4()
+		day4(),
+		day5()
 	).forEachIndexed { i, x ->
 		println("Day ${i+1}:")
 		println("\tPart 1: ${x.first}")
