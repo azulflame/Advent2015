@@ -7,6 +7,18 @@ fun main(args: Array<String>)
 	runAll()
 }
 
+fun runAll()
+{
+	return listOf(
+		day1(),
+		day2()
+	).forEachIndexed { i, x ->
+		println("Day $i:")
+		println("\tPart 1: ${x.first}")
+		println("\tPart 2: ${x.second}")
+	}
+}
+
 fun generate()
 {
 	for (x in 1..25)
@@ -33,16 +45,5 @@ fun day${x}part2(input: List<String>): Number
 		File("src/main/resources/day${x}.txt").printWriter().use { pw ->
 			pw.print("""""")
 		}
-	}
-}
-
-fun runAll()
-{
-	return listOf(
-		day1()
-	).forEachIndexed { i, x ->
-		println("Day $i:")
-		println("\tPart 1: ${x.first}")
-		println("\tPart 2: ${x.second}")
 	}
 }
