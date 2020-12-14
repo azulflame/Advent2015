@@ -7,9 +7,25 @@ fun day1(): Pair<Number,Number>
 
 fun day1part1(input: List<String>): Number
 {
-	return 0
+	return input[0].count{ it == '(' } - input[0].count { it == ')'}
 }
 fun day1part2(input: List<String>): Number
 {
+	var floor = 0
+	for(x in input[0].indices)
+	{
+		if(floor == -1)
+		{
+			return x
+		}
+		if(input[0][x] == ')')
+		{
+			floor--
+		}
+		if(input[0][x] == '(')
+		{
+			floor++
+		}
+	}
 	return 0
 }
